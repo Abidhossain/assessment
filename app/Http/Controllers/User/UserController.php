@@ -11,7 +11,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'account_type' => 'required|in:Individual,Business',
+            'account_type' => 'required|in:individual,business',
         ]);
 
         $user = User::create([
