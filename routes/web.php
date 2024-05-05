@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {
         return redirect('transactions');
